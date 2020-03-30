@@ -24,7 +24,7 @@ with open(filename, 'w') as f:
     print(game_of_the_year)
 
     honourable_mentions = games_table[1].td.ul.li.ul.findAll("li")
-    for honourable_mention in  honourable_mentions:
+    for honourable_mention in honourable_mentions:
         game = honourable_mention.i.text
         f.write(game + "\n")
         print(game)
