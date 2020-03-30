@@ -20,12 +20,11 @@ with open(filename, 'w') as f:
 
     # Grab table contents
     game_of_the_year = games_table[1].td.ul.li.i.text
-    f.write(game_of_the_year + "\n")
-    print(game_of_the_year)
+    game_of_the_year_link = 'https://en.wikipedia.org' + games_table[1].td.ul.li.i.b.a.get('href')
+    f.write(game_of_the_year + "," + game_of_the_year_link + "\n")
 
     honourable_mentions = games_table[1].td.ul.li.ul.findAll("li")
     for honourable_mention in honourable_mentions:
         game = honourable_mention.i.text
-        f.write(game + "\n")
-        print(game)
-
+        game_link = 'https://en.wikipedia.org' + honourable_mention.i.a.get('href')
+        f.write(game + "," + game_link + "\n")
