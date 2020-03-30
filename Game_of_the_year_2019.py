@@ -5,7 +5,8 @@ from time import sleep
 
 
 # Get and request Wiki's url
-url = 'https://en.wikipedia.org/wiki/The_Game_Awards_2019#Video_games'
+year = input("Choose a year from 2014 to 2019: ")
+url = 'https://en.wikipedia.org/wiki/The_Game_Awards_' + year
 print("Connecting to: " + url)
 wiki_url = urlopen(url).read()
 # Parse requested url

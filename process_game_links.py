@@ -28,6 +28,8 @@ def process_a_link(link):
     check_date = list_o_contents[-3].findAll("li")
     if len(check_date) == 0:
         date = list_o_contents[-3].td.text.replace(",", " ")
+    elif list_o_contents[-3].find("a"):
+        date = list_o_contents[-3].td.div.div.text.replace(",", " ").replace("[show]", "")
     else:
         i = 1
         for each_date in check_date:
