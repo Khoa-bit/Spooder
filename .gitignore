@@ -1,3 +1,8 @@
 
-.idea
+.idea/
 .idea/workspace.xml
+__pycache__/
+__pycache__/Game_of_the_year_2019.cpython-37.pyc
+__pycache__/process_game_links.cpython-37.pyc
+__pycache__/timing.cpython-37.pyc
+__pycache__/web_scrape.cpython-37.pyc
