@@ -1,10 +1,16 @@
-from Game_of_the_year_2019 import web_scrape_for_game_awards
-from web_scrape_14to17 import web_scrape_14to17
+from web_scrape import scrape_wiki, grab_wiki_game_table, my_range
 
 
-year = input("Choose a year from 2014 to 2019: ")
+print("==============Hi! I'm Spooder==============")
+year = input("Choose a year from 2014 to 2019 (e.g. 2019): ")
 url = 'https://en.wikipedia.org/wiki/The_Game_Awards_' + year
-# web_scrape_for_game_awards(url, year)
+print(">>> Your request will be saved in: " + "The_Game_Awards_" + year + ".csv (Same folder with main.py) <<<")
+print("...........................................")
 
-if year <= "2017":
-    web_scrape_14to17(year)
+print(f"==============The game award {year}==============")
+print("1. Game of the year")
+print("2. All awards (Avg: 3 minutes)")
+mode = input("Enter a number to choose: ")
+
+print("==============Running... :3==============")
+scrape_wiki(year, mode)

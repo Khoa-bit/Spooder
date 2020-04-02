@@ -9,7 +9,7 @@ def process_a_link(link):
     list_o_contents = info_box.findAll("tr")
 
     # Developer(s)
-    dev = list_o_contents[2].td.text
+    dev = list_o_contents[2].td.text.replace("\n", "")
 
     # Publisher(s)(s)
     pub = str()
@@ -19,11 +19,11 @@ def process_a_link(link):
         pub = list_o_contents[3].td.text.replace(",", " ")
     # List with [show] event
     elif list_o_contents[3].td.div.div:
-        pub = list_o_contents[3].td.div.div.text.replace(",", " ").replace("[show]", "")
+        pub = list_o_contents[3].td.div.div.text.replace(",", " ").replace("\n", "").replace("[show]", "")
     # List without [show] event
     else:
         for each_date in check_pub:
-            pub += each_date.text.replace(",", " ")
+            pub += each_date.text.replace(",", " ").replace("\n", "")
             pub += " | "
 
     # Platform(s)
