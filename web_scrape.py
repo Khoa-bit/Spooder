@@ -42,7 +42,7 @@ def grab_wiki_game_table(year):
     sleep(1)
     # Look for games table
     tables = soup.findAll("table")
-    if year == "2016" or year == "2017" or int(year) >= 2018:
+    if year == "2017" or int(year) >= 2018:
         games_table = tables[2].findAll("tr")
     else:
         games_table = tables[1].findAll("tr")

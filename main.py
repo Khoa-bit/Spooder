@@ -1,12 +1,14 @@
 from web_scrape import scrape_wiki, grab_wiki_game_table, my_range
-import timing
 
 
-def list_award(games_table):
+def list_awards(games_table):
     count = 2
     for i in my_range(0, len(games_table) - 2, 2):
         for j in [1, 3]:
-            award = games_table[i].contents[j].text.replace("\n", "")
+            try:
+                award = games_table[i].contents[j].text.replace("\n", "")
+            except IndexError:
+                continue
             # Exclude not game table.
             formatted_title = award.replace("\n", "").upper()
             if (formatted_title == "BEST PERFORMANCE" or formatted_title == "DEVELOPER OF THE YEAR" or
@@ -26,7 +28,7 @@ def main():
 
     print(f"\n==============The game award {year}==============")
     print("1. All awards (Avg: 3 minutes)")
-    list_award(games_table)
+    list_awards(games_table)
     mode = input("Enter a number to choose: ")
 
     print("\n==============Running... :3==============")
