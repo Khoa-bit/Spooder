@@ -4,16 +4,12 @@ from process_game_links import process_a_link
 from time import sleep
 
 
-def scrape_wiki(year, mode):
-    games_table = grab_wiki_game_table(year)
-
+def scrape_wiki(year, games_table, mode):
     find_n_clean_file(year)
 
+    # Select mode
     award_num = 1
-    if mode == "1":
-        # Game of the year Award only
-        process_store_data(year, games_table, award_num, "left")
-    elif mode == "2":
+    if mode == 1:
         # All awards
         for i in my_range(1, len(games_table), 2):
             award_num = i
@@ -23,6 +19,15 @@ def scrape_wiki(year, mode):
                 process_store_data(year, games_table, award_num, "right")
             except IndexError:
                 pass
+    else:
+        # One award
+        if mode % 2 == 0:
+            side = "left"
+            award_num = mode - 1
+        if mode % 2 == 1:
+            side = "right"
+            award_num = mode - 2
+        process_store_data(year, games_table, award_num, side)
 
 
 def grab_wiki_game_table(year):
@@ -79,11 +84,14 @@ def process_store_data(year, table, award_id, side):
         # 1st row of table
         # Grab Game of the year table title
         title = table[award_id - 1].contents[num].text
-        formatted_title = title.replace("\n", "").upper()
-        # Exclude best people.
-        if formatted_title == "BEST PERFORMANCE" or formatted_title == "DEVELOPER OF THE YEAR"\
-                or formatted_title == "CONTENT CREATOR OF THE YEAR":
+        formatted_title = title.replace("\n", "").replace("[a]", "").replace("[b]", "").upper()
+
+        # Exclude not game table.
+        if (formatted_title == "BEST PERFORMANCE" or formatted_title == "DEVELOPER OF THE YEAR" or
+                formatted_title == "CONTENT CREATOR OF THE YEAR"):
             return
+
+        # Write the 1st row of table.
         print(f"Adding {formatted_title} award to {filename}")
         f.write(formatted_title + ",")
         f.write("Links,")
@@ -106,7 +114,7 @@ def process_store_data(year, table, award_id, side):
             f.write(game_of_the_year.upper() + " (1st)" + "," + game_of_the_year_link + "," + processed_data + "\n")
         except AttributeError:
             # Write only name to csv file.
-            f.write(game_of_the_year.upper() + " (1st)" + "\n")
+            f.write(game_of_the_year.upper() + " (1st),(No Link)" + "\n")
             print("No link to " + game_of_the_year)
             print("Skipped!")
 
@@ -115,23 +123,36 @@ def process_store_data(year, table, award_id, side):
 
         honourable_mentions = table[award_id].contents[num].ul.li.ul.findAll("li")
         for honourable_mention in honourable_mentions:
-            game = honourable_mention.i.text
+            # Try to grab game title
+            try:
+                game = honourable_mention.i.text
+            except AttributeError:
+                # Not a game
+                not_game = honourable_mention.a.text
+                not_game_link = 'https://en.wikipedia.org' + honourable_mention.a.get('href')
+                f.write(not_game + "," + not_game_link + ",(Not a game)" + "\n")
+                print(not_game + " is not a game.")
+                print("Skipped!")
+                continue
+            
             # Try to grab link.
             try:
                 game_link = 'https://en.wikipedia.org' + honourable_mention.i.a.get('href')
             except AttributeError:
+                # No link
                 # Write only name to csv file.
-                f.write(game + "\n")
-                print("No link to " + game_of_the_year)
+                f.write(game + ",(No Link)" + "\n")
+                print("No link to " + game)
                 print("Skipped!")
                 continue
 
             # Hard coded to skip
-            # "Trover Saves the Universe", "Skylanders: Trap Team", "Ultra Street Fighter IV" and "Fornite"
+            # "Trover Saves the Universe", "Skylanders: Trap Team", "Ultra Street Fighter IV", "Fornite", "BattleTech"
             # due to complication of data.
-            if game == "Trover Saves the Universe" or game == "Skylanders: Trap Team" \
-                    or game == "Ultra Street Fighter IV" or "Fortnite":
-                f.write(game + "," + game_link + "," + "\n")
+            if (game == "Trover Saves the Universe" or game == "Skylanders: Trap Team" or
+                    game == "Ultra Street Fighter IV" or game == "Fortnite" or game == "Nintendo Labo" or
+                    game == "BattleTech"):
+                f.write(game + "," + game_link + ",(Skipped due to complication)" + "\n")
                 continue
 
             # Process link

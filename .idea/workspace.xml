@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dfef08b-c949-4cbd-a3d8-d43f7eba53a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.~lock.The_Game_Awards_2014.csv#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.~lock.The_Game_Awards_2018.csv#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.~lock.The_Game_Awards_2019.csv#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/The_Game_Awards_2017.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/The_Game_Awards_2018.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/The_Game_Awards_2019.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_scrape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/timing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2015.csv#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2016.csv#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.The_Game_Awards_2016.csv#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_of_the_year_2019.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Game_Awards_2014.csv" beforeDir="false" afterPath="$PROJECT_DIR$/The_Game_Awards_2014.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Game_Awards_2015.csv" beforeDir="false" afterPath="$PROJECT_DIR$/The_Game_Awards_2015.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2014.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2016.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2018.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.The_Game_Awards_2019.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Game_Awards_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/The_Game_Awards_2018.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Game_Awards_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/The_Game_Awards_2019.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_game_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_game_links.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_scrape_14to17.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_scrape.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="game-of-the-year-or-all-awards" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -212,7 +206,8 @@
       <workItem from="1585664103491" duration="1083000" />
       <workItem from="1585733427374" duration="16609000" />
       <workItem from="1585791117044" duration="7630000" />
-      <workItem from="1585799001045" duration="3644000" />
+      <workItem from="1585799001045" duration="9252000" />
+      <workItem from="1585814700858" duration="2536000" />
     </task>
     <task id="LOCAL-00001" summary="Add Feature to process data">
       <created>1585562436955</created>
@@ -242,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585749008137</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Feature: choose game of the year or all awards">
+      <created>1585802699655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585802699655</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +279,8 @@
     <MESSAGE value="Fix bug in Process data&#10;Some game link have difference format for release date" />
     <MESSAGE value="Fix bug in formatting when processing data.&#10;New feature: Ability to Add more awards to one csv file." />
     <MESSAGE value="Merge web_scrape_14to17.py to main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge web_scrape_14to17.py to main.py" />
+    <MESSAGE value="Feature: choose game of the year or all awards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: choose game of the year or all awards" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="31" width="800" height="684" key="#Python" timestamp="1585217025064">
@@ -308,10 +311,10 @@
       <screen x="0" y="0" width="1366" height="740" />
     </state>
     <state x="434" y="241" width="488" height="265" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.740@0.0.1366.740" timestamp="1585387191029" />
-    <state x="244" y="0" width="867" height="740" key="CommitChangelistDialog2" timestamp="1585749007942">
+    <state x="244" y="0" width="867" height="740" key="CommitChangelistDialog2" timestamp="1585817306057">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state x="244" y="0" width="867" height="740" key="CommitChangelistDialog2/0.0.1366.740@0.0.1366.740" timestamp="1585749007942" />
+    <state x="244" y="0" width="867" height="740" key="CommitChangelistDialog2/0.0.1366.740@0.0.1366.740" timestamp="1585817306057" />
     <state width="1364" height="480" key="DebuggerActiveHint" timestamp="1585662957678">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
@@ -324,38 +327,38 @@
       <screen x="0" y="0" width="1366" height="740" />
     </state>
     <state x="466" y="128" width="424" height="491" key="FileChooserDialogImpl/0.0.1366.740@0.0.1366.740" timestamp="1585664892482" />
-    <state width="1320" height="106" key="GridCell.Tab.0.bottom" timestamp="1585802393122">
+    <state width="1320" height="100" key="GridCell.Tab.0.bottom" timestamp="1585817346773">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="106" key="GridCell.Tab.0.bottom/0.0.1366.740@0.0.1366.740" timestamp="1585802393122" />
-    <state width="1320" height="106" key="GridCell.Tab.0.center" timestamp="1585802393121">
+    <state width="1320" height="100" key="GridCell.Tab.0.bottom/0.0.1366.740@0.0.1366.740" timestamp="1585817346773" />
+    <state width="1320" height="100" key="GridCell.Tab.0.center" timestamp="1585817346773">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="106" key="GridCell.Tab.0.center/0.0.1366.740@0.0.1366.740" timestamp="1585802393121" />
-    <state width="1320" height="106" key="GridCell.Tab.0.left" timestamp="1585802393121">
+    <state width="1320" height="100" key="GridCell.Tab.0.center/0.0.1366.740@0.0.1366.740" timestamp="1585817346773" />
+    <state width="1320" height="100" key="GridCell.Tab.0.left" timestamp="1585817346772">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="106" key="GridCell.Tab.0.left/0.0.1366.740@0.0.1366.740" timestamp="1585802393121" />
-    <state width="1320" height="106" key="GridCell.Tab.0.right" timestamp="1585802393121">
+    <state width="1320" height="100" key="GridCell.Tab.0.left/0.0.1366.740@0.0.1366.740" timestamp="1585817346772" />
+    <state width="1320" height="100" key="GridCell.Tab.0.right" timestamp="1585817346773">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="106" key="GridCell.Tab.0.right/0.0.1366.740@0.0.1366.740" timestamp="1585802393121" />
-    <state width="1320" height="224" key="GridCell.Tab.1.bottom" timestamp="1585802330978">
+    <state width="1320" height="100" key="GridCell.Tab.0.right/0.0.1366.740@0.0.1366.740" timestamp="1585817346773" />
+    <state width="1320" height="203" key="GridCell.Tab.1.bottom" timestamp="1585816252378">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="224" key="GridCell.Tab.1.bottom/0.0.1366.740@0.0.1366.740" timestamp="1585802330978" />
-    <state width="1320" height="224" key="GridCell.Tab.1.center" timestamp="1585802330978">
+    <state width="1320" height="203" key="GridCell.Tab.1.bottom/0.0.1366.740@0.0.1366.740" timestamp="1585816252378" />
+    <state width="1320" height="203" key="GridCell.Tab.1.center" timestamp="1585816252378">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="224" key="GridCell.Tab.1.center/0.0.1366.740@0.0.1366.740" timestamp="1585802330978" />
-    <state width="1320" height="224" key="GridCell.Tab.1.left" timestamp="1585802330978">
+    <state width="1320" height="203" key="GridCell.Tab.1.center/0.0.1366.740@0.0.1366.740" timestamp="1585816252378" />
+    <state width="1320" height="203" key="GridCell.Tab.1.left" timestamp="1585816252377">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="224" key="GridCell.Tab.1.left/0.0.1366.740@0.0.1366.740" timestamp="1585802330978" />
-    <state width="1320" height="224" key="GridCell.Tab.1.right" timestamp="1585802330978">
+    <state width="1320" height="203" key="GridCell.Tab.1.left/0.0.1366.740@0.0.1366.740" timestamp="1585816252377" />
+    <state width="1320" height="203" key="GridCell.Tab.1.right" timestamp="1585816252378">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state width="1320" height="224" key="GridCell.Tab.1.right/0.0.1366.740@0.0.1366.740" timestamp="1585802330978" />
+    <state width="1320" height="203" key="GridCell.Tab.1.right/0.0.1366.740@0.0.1366.740" timestamp="1585816252378" />
     <state x="172" y="3" width="1022" height="737" key="SettingsEditor" timestamp="1585618462026">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
@@ -364,14 +367,22 @@
       <screen x="0" y="0" width="1366" height="740" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.740@0.0.1366.740" timestamp="1585659951944" />
+    <state x="278" y="94" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1585802716982">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="278" y="94" width="800" height="558" key="Vcs.Push.Dialog.v2/0.0.1366.740@0.0.1366.740" timestamp="1585802716982" />
     <state width="683" height="370" key="XDebugger.FullValuePopup" timestamp="1585801137642">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
     <state width="683" height="370" key="XDebugger.FullValuePopup/0.0.1366.740@0.0.1366.740" timestamp="1585801137642" />
-    <state x="339" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1585799001151">
+    <state x="100" y="100" width="1166" height="540" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1585802844853">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
-    <state x="339" y="197" key="com.intellij.ide.util.TipDialog/0.0.1366.740@0.0.1366.740" timestamp="1585799001151" />
+    <state x="100" y="100" width="1166" height="540" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1366.740@0.0.1366.740" timestamp="1585802844853" />
+    <state x="339" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1585814714692">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="339" y="197" key="com.intellij.ide.util.TipDialog/0.0.1366.740@0.0.1366.740" timestamp="1585814714692" />
     <state x="451" y="290" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585746087999">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
@@ -380,6 +391,10 @@
       <screen x="0" y="0" width="1366" height="740" />
     </state>
     <state x="218" y="89" width="920" height="569" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.740@0.0.1366.740" timestamp="1585801836123" />
+    <state x="409" y="64" width="537" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1585804722805">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="409" y="64" width="537" height="619" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.740@0.0.1366.740" timestamp="1585804722805" />
     <state x="346" y="61" width="672" height="678" key="search.everywhere.popup" timestamp="1585800517445">
       <screen x="0" y="0" width="1366" height="740" />
     </state>
@@ -387,13 +402,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/web_scrape.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -404,15 +412,14 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="int(year)" language="Python" />
-        <watch expression="games_table" language="Python" />
+        <watch expression="honourable_mention.i.text" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/3nd_Project_2020$FUUUUUU.coverage" NAME="FUUUUUU Coverage Results" MODIFIED="1585472350748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web Scraping" />
     <SUITE FILE_PATH="coverage/3nd_Project_2020$test.coverage" NAME="test Coverage Results" MODIFIED="1585471912196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web Scraping" />
-    <SUITE FILE_PATH="coverage/3nd_Project_2020$main.coverage" NAME="main Coverage Results" MODIFIED="1585802393105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/3nd_Project_2020$main.coverage" NAME="main Coverage Results" MODIFIED="1585817346762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3nd_Project_2020$Game_of_the_year_2019.coverage" NAME="Game_of_the_year_2019 Coverage Results" MODIFIED="1585619672192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3nd_Project_2020$year__2017.coverage" NAME="year&lt;=2017 Coverage Results" MODIFIED="1585746734170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
